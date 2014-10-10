@@ -1,0 +1,6 @@
+<menu xmlns:androclass="http://schemas.android.com/apk/res/android" >
+    <item androclass:id="@+id/item1" androclass:title="Attend"></item>
+    <item androclass:id="@+id/item2" androclass:title="Unsure" ></item>
+    <item androclass:id="@+id/item3" androclass:title="Decline"></item>
+    <item androclass:id="@+id/item4" androclass:title="Cancel"></item>
+    </menu>  

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="login_Button_Blue">#145AE1</color>
+    <color name="AppHeader_Blue">#3B57A0</color>
+    <!-- <color name="AppHeader_Blue">#2C4388</color> -->
+    <color name="Grey">#EBEBF1</color>
+    <color name="White">#FFFFFF</color>
+
+</resources>

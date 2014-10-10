@@ -1,0 +1,43 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 19
+    buildToolsVersion "20.0.0"
+
+    defaultConfig {
+        applicationId "com.cts.jnjbridgetoemploymentpoc.ui.activity"
+        minSdkVersion 14
+        targetSdkVersion 19
+    }
+
+    signingConfigs {
+        release {
+            storeFile file('bte.jks')
+            storePassword '123456'
+            keyAlias 'BTE Key'
+            keyPassword '123456'
+        }
+    }
+    buildTypes {
+        release {
+            runProguard false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+            renderscriptDebugBuild false
+            zipAlign true
+            signingConfig signingConfigs.release
+        }
+        debug {
+            signingConfig signingConfigs.release
+        }
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+}
+
+dependencies {
+    compile 'com.android.support:appcompat-v7:19.1.0'
+    compile files('libs/picasso-2.3.4.jar')
+    compile project(':facebook')
+}

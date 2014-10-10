@@ -1,0 +1,181 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/event_details"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Grey" >
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:background="@color/AppHeader_Blue"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/White" />
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/linearLayout1"
+        android:layout_centerHorizontal="true" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <ImageView
+                android:id="@+id/eventLogo"
+                android:layout_width="fill_parent"
+                android:layout_height="150dip"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:src="@drawable/event" />
+
+            <Button
+                android:id="@+id/eventName"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/eventLogo"
+                android:layout_marginTop="3dp"
+                android:background="@color/White"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:text="@string/organized_by"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <Button
+                android:id="@+id/eventDate"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/eventName"
+                android:layout_marginTop="3dp"
+                android:background="@color/White"
+                android:drawableLeft="@drawable/time"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <Button
+                android:id="@+id/eventLocation"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/eventDate"
+                android:layout_marginTop="3dp"
+                android:background="@color/White"
+                android:drawableLeft="@drawable/loc"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="@string/not_specified"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <Button
+                android:id="@+id/attendees"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/eventLocation"
+                android:layout_marginTop="3dp"
+                android:background="@android:color/white"
+                android:drawableRight="@drawable/arrow"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:text="@string/attendees" />
+
+            <LinearLayout
+                android:id="@+id/llRsvp"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/attendees"
+                android:layout_marginTop="3dp"
+                android:background="@android:color/white"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/RSVP"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_weight="1"
+                    android:background="@android:color/white"
+                    android:gravity="left|center_vertical"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:text="@string/rsvp" />
+
+                <ImageView
+                    android:id="@+id/ivRsvp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="15dip"
+                    android:paddingRight="15dip" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/postEvent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/llRsvp"
+                android:layout_marginTop="5dp"
+                android:background="@color/White"
+                android:text="@string/post_to_event"
+                android:textColor="@color/login_Button_Blue"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/feedback"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/postEvent"
+                android:layout_marginTop="5dp"
+                android:background="@color/White"
+                android:text="@string/submitfeedback"
+                android:textColor="@color/login_Button_Blue"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/llPosts"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/feedback"
+                android:orientation="vertical" >
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+    <FrameLayout
+        android:id="@+id/hideLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="#8F000000"
+        android:visibility="gone" >
+    </FrameLayout>
+
+</RelativeLayout>

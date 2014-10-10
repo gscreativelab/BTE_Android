@@ -1,0 +1,62 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/White" >
+
+    <RelativeLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:background="@color/Grey"
+        android:orientation="horizontal" >
+        
+        <Button
+            android:id="@+id/Cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/Grey"
+            android:text="Cancel"
+            android:textColor="@color/login_Button_Blue" />
+
+        <Button
+            android:id="@+id/Post"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="@color/Grey"
+            android:text="Post" 
+            />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/Cancel"
+            android:layout_alignBottom="@+id/Cancel"
+            android:layout_centerHorizontal="true"
+            android:text="Post"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/linearLayout1"
+        android:background="@color/White"
+        android:ems="10"
+        android:paddingTop="10dp"
+        android:paddingLeft="10dp"
+        android:hint="Write something..."
+        android:inputType="textMultiLine" >
+
+        <requestFocus />
+    </EditText>
+    
+</RelativeLayout>
